@@ -16,11 +16,12 @@ O projeto back-end deve ser executado primeiro, após isso, execute o front-end.
 Execute a Classe Principal do Projeto Back-end: CrudFuncionarioApplication.java
 ```
 
-* **Necessário ter instalado o NPM.**
+* **Necessário ter instalado o NPM na pasta do projeto.**
 
 **Executando Projeto Front-end**
 
 ```
+Comando: npm install
 NPM START NA PASTA DO PROJETO (Ex: C:\Users\CRUDFuncionario\CRUDFuncionario - Front - NPM START)
 ```
 
