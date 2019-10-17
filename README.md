@@ -6,7 +6,7 @@ O projeto contém dois projetos, na qual um é o do front-end e o outro do back-
 
 ### Executando o Projeto
 
-O projeto back-end deve ser executado primeiro, após isso, execute o front-end. Como o projeto conta com **banco de dados MySQL**, recomenda-se o uso do software **Xamp**. Após a execução do **Xamp** (Star: MySQL e Apache), importe o script do banco de dados contido neste projeto.
+O projeto back-end deve ser executado primeiro, após isso, execute o front-end. Como o projeto conta com **banco de dados MySQL**, recomenda-se o uso do software **Xamp**. Após a execução do **Xamp** (Start: MySQL e Apache), importe o script do banco de dados contido neste projeto acessando o localhost e selecionando a opção phpMyAdmin.
 
 * **Necessário ter instalado JDK8, Maven e NodeJS.**
 
