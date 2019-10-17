@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CrudFuncionarioApplication",
+            "request": "launch",
+            "mainClass": "com.matheus.CRUDFuncionario.SistemaFuncionario.CrudFuncionarioApplication",
+            "projectName": "CRUDFuncionario"
+        }
+    ]
+}

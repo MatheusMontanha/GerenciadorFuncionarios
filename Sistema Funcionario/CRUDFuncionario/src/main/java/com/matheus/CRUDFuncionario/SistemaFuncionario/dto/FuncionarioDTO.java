@@ -12,6 +12,9 @@ import lombok.Data;
 /**
  *
  * @author Matheus Montanha
+ * 
+ * Classe que representa o objeto da transferencia
+ * Anotação @Data da biblioteca Lombok que deixa implicito os getters e setters
  */
 @Data
 public class FuncionarioDTO {

@@ -19,6 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  *
  * @author Matheus Montanha
+ * 
+ *         Anotação @CrossOrigin indica a liberação da requisição do front-end
+ *         Anotação @RestController indica que a classe é uma controller padrão
+ *         do Spring Boot Anotação @RequestMappping indica a url de acesso.
  */
 @CrossOrigin("http://localhost:3000")
 @RestController
@@ -28,6 +32,12 @@ public class FuncionarioRestController {
     @Autowired
     private FuncionarioRepository repositoryFuncionario;
 
+    /**
+     * Método que salva um funcionário.
+     * 
+     * @param funcionario a ser cadastrado
+     * @return o funcionário salvo
+     */
     @PostMapping
     public ResponseEntity<Funcionario> httpPostFuncionario(@RequestBody FuncionarioDTO funcionario) {
         Funcionario novoFuncionario = new Funcionario();
@@ -39,6 +49,11 @@ public class FuncionarioRestController {
         return ResponseEntity.ok(theCreatedFuncionario);
     }
 
+    /**
+     * Método que recupera todos os funcionarios cadastrados.
+     * 
+     * @return lista de funcionarios
+     */
     @GetMapping(value = "")
     public ResponseEntity<Object> httpGetFuncionarios() {
         if (repositoryFuncionario.count() > 0) {
@@ -49,6 +64,12 @@ public class FuncionarioRestController {
         }
     }
 
+    /**
+     * Método que retorna um funcionário específico
+     * 
+     * @param id do funcionário desejado
+     * @return funcionário com o @param id passado
+     */
     @GetMapping("/{id}")
     public ResponseEntity<Object> httpGetUnicoFuncionario(@PathVariable long id) {
         Optional<Funcionario> funcioario = repositoryFuncionario.findById(id);
@@ -59,6 +80,12 @@ public class FuncionarioRestController {
         }
     }
 
+    /**
+     * Método que deleta um funcionário
+     * 
+     * @param id do funcionário que deseja deletar
+     * @return retorna o funcionário deletado
+     */
     @DeleteMapping("/{id}")
     public ResponseEntity<Object> httpDeleteFuncionario(@PathVariable long id) {
         Optional<Funcionario> funcionario = repositoryFuncionario.findById(id);
@@ -70,6 +97,12 @@ public class FuncionarioRestController {
         }
     }
 
+    /**
+     * Método que atualiza um funcionário
+     * @param id do funcionário que deseja atualizar
+     * @param funcionario com os novos dados a serem atualizado.
+     * @return o funcionário atualizado
+     */
     @PutMapping("/{id}")
     public ResponseEntity<Funcionario> httpPutFuncionario(@PathVariable long id,
             @RequestBody FuncionarioDTO funcionario) {

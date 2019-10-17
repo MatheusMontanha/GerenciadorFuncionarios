@@ -7,7 +7,12 @@ import org.springframework.stereotype.Repository;
 /**
  *
  * @author Matheus Montanha
+ * 
+ * Interface que extend os métodos presentes no CRUD.
+ * 
+ * Anotação @Repository indica o uso do padrão de projeto Repository padrão do Spring Boot.
  */
+
 @Repository
 public interface FuncionarioRepository extends CrudRepository<Funcionario, Long> {
 
